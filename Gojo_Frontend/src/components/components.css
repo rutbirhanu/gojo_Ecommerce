@@ -1,0 +1,23 @@
+.nav-catagory-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-container img{
+    border-radius: 100%;
+    position: absolute;
+    top: 15px;
+    left: 14px;
+}
+
+.brand-container {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    box-shadow: 1px 1px 4px 1px rgb(198, 198, 198);
+}
+
+
