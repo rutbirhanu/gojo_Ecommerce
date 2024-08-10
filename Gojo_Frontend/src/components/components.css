@@ -20,4 +20,25 @@
     box-shadow: 1px 1px 4px 1px rgb(198, 198, 198);
 }
 
+.category-card img{
+height: 310px;
+width: 290px;
+border-radius: 4px;
+}
 
+.category-card{
+position: relative;
+
+}
+
+.category-card-overlay{
+position: absolute;
+top: 15px;
+left: 10px;
+}
+
+.category-card-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
