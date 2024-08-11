@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import "./components.css"
-function BrandContainer() {
+function BrandContainer({imgSource}) {
   return (
       <div className='brand-container'>
-          <img src="https://assets.adidas.com/images/w_1880,f_auto,q_auto/7ed0855435194229a525aad6009a0497_9366/EG4958_01_standard.jpg" height="70px" width="70px"/>
+          <img src={imgSource} height="93px" width="93px"/>
     </div>
   )
 }

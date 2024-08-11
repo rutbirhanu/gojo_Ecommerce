@@ -4,8 +4,8 @@ function ItemCard() {
   return (
     <div>
   <Card style={{ width: '15rem' }}>
-      <Card.Img variant="top" src="../../public/banner5.webp" height="130px" />
-      <Card.Body>
+      <Card.Img variant="top" src="../../public/banner5.webp" height="150px" />
+      <Card.Body style={{ height: '5rem' }}>
         <Card.Text>
           Some quick example text to 
           </Card.Text>
