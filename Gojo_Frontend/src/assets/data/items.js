@@ -1,6 +1,5 @@
 
 export const Items=[
-    [
         {
           "id": "1",
           "name": "Sneaker",
@@ -161,7 +160,5 @@ export const Items=[
           "price": "600",
           "brand": "Barbie"
         }
-      ]
-      
 
 ]

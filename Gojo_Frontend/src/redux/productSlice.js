@@ -14,9 +14,12 @@ const productSlice = createSlice({
         setProduct: (state, action) => {
             state.products= action.payload
         },
-        
+        setSearchTerm: (state, action) => {
+            state.searchTerm = action.payload
+            state.filteredProducts= state.products.filter(product=>product.name.toLowerCase().includes(state.searchTerm.toLowerCase()))
+        }
     }
 })
 
-export const { setProduct } = productSlice.actions
+export const { setProduct , setSearchTerm} = productSlice.actions
 export default productSlice.reducer
