@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux"
 
 function HomePage() {
   const dispatch = useDispatch()
-  const { product } = useSelector(state => state.product)
+  const { products } = useSelector(state => state.product)
 
   useEffect(() => {
     dispatch(setProduct(Items))
@@ -48,7 +48,7 @@ function HomePage() {
       </div>
 
       <div>
-        {product.map(product => (
+        {products.map(product => (
           <p key={product.id}>{product.id}</p>
         ))
         }
