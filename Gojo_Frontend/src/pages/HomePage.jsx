@@ -8,6 +8,8 @@ import { setProduct } from "../redux/productSlice"
 import { useEffect } from "react"
 import { Items } from "../assets/data/items"
 import { useDispatch, useSelector } from "react-redux"
+import NavBar from "../components/NavBar"
+import {NavgationCategories} from "../assets/data/categories"
 
 function HomePage() {
   const dispatch = useDispatch()
@@ -18,23 +20,13 @@ function HomePage() {
   }, [])
   return (
     <div>
-      <CarouselComp />
+      <NavBar/>
       <div className="categories-container">
-        <NavCatagoryContainer category="Women" imgSource="/dress.png" />
-        <NavCatagoryContainer category="Men" imgSource="/t-shirt.png" />
-        <NavCatagoryContainer category="Sport" imgSource="/balls-sports.png" />
-        <NavCatagoryContainer category="Electronics" imgSource="/smartphone-call.png" />
-        <NavCatagoryContainer category="Cosmetics" imgSource="/cosmetics.png" />
-        <NavCatagoryContainer category="Toys" imgSource="/storage-box.png" />
+        {NavgationCategories.map(item => {
+          return <NavCatagoryContainer key={item.title} category={item.title} imgSource={item.image} />
+        })}
       </div>
-      <ItemCard />
-      <ItemCard />
-      <ItemCard />
-      <BrandContainer imgSource="https://lecoureurnordique.ca/cdn/shop/products/nike-zoom-fly-4-homme-le-coureur-nordique-33_700x700.jpg?v=1668773341" />
-      <BrandContainer imgSource="https://www.shutterstock.com/image-photo/moscow-russia-october-07-2017-600nw-729667363.jpg" />
-      <BrandContainer imgSource="https://img.freepik.com/premium-photo/isolated-sony-a7-iii-mirrorless-camera-front-view-white-backgroun-white-background-clean_655090-800284.jpg" />
-      <BrandContainer imgSource="https://www.kickscrew.com/cdn/shop/products/main-square_761b9a58-6644-4d07-8c53-40c080413482_540x.jpg?v=1694121580" />
-      <BrandContainer imgSource="https://sdcdn.io/mac/ca/mac_sku_SMXF28_1x1_0.png?width=1080&height=1080" />
+      <CarouselComp />
 
       <div className="category-card-container">
         <CategoryCard imgSource="https://i.mdel.net/oftheminute/images/2019/08/stas_55_04.jpg" category="Kids" desc="Blouse, Skirt, Mini Skirt and more" />
@@ -47,9 +39,17 @@ function HomePage() {
         <CategoryCard imgSource="https://publish.purewow.net/wp-content/uploads/sites/2/2022/03/The-Learning-Journey-Match-It-Self-Correcting-Spelling-Puzzles-Ages-2-to-5-TOP-Educational-Toys.jpg?resize=260%2C260" category="Women" desc="Blouse, Skirt, Mini Skirt and more" />
       </div>
 
-      <div>
+      <div className="brand-parent-container">
+      <BrandContainer imgSource="https://lecoureurnordique.ca/cdn/shop/products/nike-zoom-fly-4-homme-le-coureur-nordique-33_700x700.jpg?v=1668773341" />
+      <BrandContainer imgSource="https://www.shutterstock.com/image-photo/moscow-russia-october-07-2017-600nw-729667363.jpg" />
+      <BrandContainer imgSource="https://img.freepik.com/premium-photo/isolated-sony-a7-iii-mirrorless-camera-front-view-white-backgroun-white-background-clean_655090-800284.jpg" />
+      <BrandContainer imgSource="https://www.kickscrew.com/cdn/shop/products/main-square_761b9a58-6644-4d07-8c53-40c080413482_540x.jpg?v=1694121580" />
+      <BrandContainer imgSource="https://sdcdn.io/mac/ca/mac_sku_SMXF28_1x1_0.png?width=1080&height=1080" />
+      </div>
+      
+      <div className="item-parent-container" >
         {products.map(product => (
-          <p key={product.id}>{product.id}</p>
+          <ItemCard key={product.id} name={product.name} image={product.image} price={product.price} />
         ))
         }
       </div>

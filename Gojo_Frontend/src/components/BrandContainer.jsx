@@ -3,7 +3,7 @@ import "./components.css"
 function BrandContainer({imgSource}) {
   return (
       <div className='brand-container'>
-          <img src={imgSource} height="93px" width="93px"/>
+          <img src={imgSource} height="96px" width="96px"/>
     </div>
   )
 }

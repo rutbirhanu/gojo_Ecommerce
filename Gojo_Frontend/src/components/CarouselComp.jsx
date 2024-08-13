@@ -6,46 +6,46 @@ function CarouselComp() {
           <Carousel data-bs-theme="dark">
       <Carousel.Item>
         <img
-          className="d-block w-50"
-          src="https://previews.123rf.com/images/pondshutter/pondshutter2107/pondshutter210700269/172372926-cosmetics-or-skin-care-product-ads-with-bottle-banner-ad-for-beauty-products-brown-and-leaf.jpg"
+          className="d-block w-100"
+          src="https://ithinkbigger.com/wp-content/uploads/2022/03/eCommerce-Website-Components-photo-1024x375.jpg"
             alt="First slide"
-            height="130px"
+            height="230px"
         />
         
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-50"
-          src="../../public/banner2.jpg"
+          className="d-block w-100"
+          src="https://images.vexels.com/media/users/3/194700/raw/aa5b7c80ff2c80f764e2cabf5492a701-buy-online-slider-template.jpg"
             alt="Second slide"
-             height="200px"
+             height="230px"
         />
         
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-50"
+          className="d-block w-100"
           src="../../public/banner3.jpg"
             alt="Third slide"
-             height="200px"
+             height="230px"
         />
        
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-50"
+          className="d-block w-100"
           src="../../public/banner4.jpg"
             alt="Third slide"
-              height="200px"
+             height="230px"
         />
        
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-50"
-          src="../../public/banner5.webp"
+          className="d-block w-100"
+          src="https://cdn.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603_640.jpg"
             alt="Fifth slide"
-            height="200px"
+            height="230px"
             style={{ objectFit: "cover"}}
         />
       </Carousel.Item>
