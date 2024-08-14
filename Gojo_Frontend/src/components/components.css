@@ -5,21 +5,17 @@
     justify-content: center;
 }
 
-.brand-container img {
-    border-radius: 100%;
-    position: absolute;
-    top: 7px;
-    left: 8px;
+.nav-catagory-container small {
+    font-family: Averta, sans-serif;
+    font-weight: 400;
+
 }
 
-.brand-container {
-    position: relative;
-    height: 110px;
-    width: 110px;
+.brand-container img {
     border-radius: 100%;
     box-shadow: 1px 1px 4px 1px rgb(198, 198, 198);
-    margin: 2em 0;
 }
+
 
 .category-card img {
     height: 310px;
@@ -29,20 +25,44 @@
 
 .category-card {
     position: relative;
+    margin: 0.7rem 1rem;
+}
 
+.category-card p {
+    font-family: Averta, sans-serif;
+    font-weight: 400;
+}
+
+.category-card h5 {
+    font-family: Averta, sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
 }
 
 .category-card-overlay {
     position: absolute;
-    top: 15px;
-    left: 10px;
+    top: 17px;
+    left: 15px;
 }
 
-.category-card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 25px;
+.category-card-container1 {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
 
+.category-card-container1::-webkit-scrollbar {
+    width: 0;
+}
+
+.category-card-container2 {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.category-card-container2::-webkit-scrollbar {
+    width: 0;
 }
 
 /* nav bar css  */
@@ -70,19 +90,43 @@
     left: 0;
     right: 0;
     z-index: 10;
+    background: linear-gradient(45deg, #D29468, #E2B99D);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(193, 154, 107);
     height: 4em;
     margin-bottom: 17px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px 10px;
+    overflow: hidden;
 }
 
-.left-side-nav,
-.righ-side-nav {
-    width: 100%;
+.navbar-container p {
+    font-family: Averta, sans-serif;
+    font-weight: 600;
+}
+
+.left-side-nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
+.right-side-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.right-side-nav>* {
+    margin: 23px;
+}
+
+.title-component p {
+    margin-left: 3em;
+    margin-bottom: 1em;
+    font-family: Averta, sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+}

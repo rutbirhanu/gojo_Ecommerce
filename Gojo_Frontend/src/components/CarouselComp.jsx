@@ -34,7 +34,7 @@ function CarouselComp() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="../../public/banner4.jpg"
+          src="https://i0.wp.com/nlindia.com/wp-content/uploads/2021/05/ecommerce-website-like-amazon-banner.jpg"
             alt="Third slide"
              height="230px"
         />
@@ -43,7 +43,7 @@ function CarouselComp() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://cdn.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603_640.jpg"
+          src="https://www.shutterstock.com/image-vector/ecommerce-website-banner-template-presents-260nw-2252124451.jpg"
             alt="Fifth slide"
             height="230px"
             style={{ objectFit: "cover"}}

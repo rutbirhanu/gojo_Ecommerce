@@ -1,3 +1,4 @@
+import "./components.css"
 
 function NavBar() {
   return (
@@ -9,10 +10,12 @@ function NavBar() {
           <img src="/search-logo.png" alt="search" height="17px"/>
         </div>
       </div>
-      <div className="righ-side-nav">
-    <p>Download app</p>
-    <p>Sign up</p>
-        <p>login   |  </p>
+      <div className="right-side-nav">
+        <p>Download app</p>
+        <p>Sign up</p>
+        <p>login</p>
+        <p> || </p>
+        <img src="/cart.png" alt="cart" height="21px"/>
       </div>
     </div>
   )
