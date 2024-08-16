@@ -22,8 +22,15 @@
     gap: 3em;
 }
 
-.item-parent-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1em;
+
+.category-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    margin: 1em;
+    margin-bottom: 1em;
+}
+.category-items::-webkit-scrollbar{
+    width: 0;
 }

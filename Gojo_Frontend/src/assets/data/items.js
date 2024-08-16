@@ -179,6 +179,7 @@ export const Items=[
           "price": "600",
           "brand": "Barbie",
            "image":"/apple3.jpg"
-        }
+  }
+        
 
 ]

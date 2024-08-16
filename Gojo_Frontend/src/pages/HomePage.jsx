@@ -18,7 +18,17 @@ function HomePage() {
 
   useEffect(() => {
     dispatch(setProduct(Items))
+
   }, [])
+
+  const groupedProducts = products.reduce((acc, product) => {
+    if (!acc[product.category]) {
+      acc[product.category] = [];
+    }
+    acc[product.category].push(product);
+    return acc;
+  }, {});
+
   return (
     <div className="landing-page-container">
       <NavBar/>
@@ -52,11 +62,17 @@ function HomePage() {
       <BrandContainer imgSource="https://sdcdn.io/mac/ca/mac_sku_SMXF28_1x1_0.png?width=1080&height=1080" />
       </div>
       
-      <div className="item-parent-container" >
-        {products.map(product => (
-          <ItemCard key={product.id} name={product.name} image={product.image} price={product.price} />
-        ))
-        }
+      <div  >
+      {Object.keys(groupedProducts).map(category => (
+        <div className="item-parent-container" key={category}>
+          <TitleComponent title={category} />
+          <div className="category-items">
+            {groupedProducts[category].map(product => (
+              <ItemCard key={product.id} name={product.name} image={product.image} price={product.price} />
+            ))}
+          </div>
+        </div>
+      ))}
       </div>
 
     </div>

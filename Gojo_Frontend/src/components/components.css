@@ -124,9 +124,44 @@
 }
 
 .title-component p {
-    margin-left: 3em;
-    margin-bottom: 1em;
+    margin: 1em 4vw;
     font-family: Averta, sans-serif;
     font-weight: 600;
     font-size: 1.1rem;
+}
+
+.item-card-parent-container{
+height: 14em;
+width: 12em;
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: 10px 15px 2rem 15px;
+}
+
+.item-card-image img {
+    width: 10em;
+    height: 10em;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 1px;
+    box-shadow: 1px 1px 1px 2px rgb(235, 235, 235);
+
+}
+
+.item-description p{
+    font-family: Averta, sans-serif;
+    font-size: 14.5px;
+    font-weight: 500;
+    overflow-x: hidden;
+}
+.item-description{
+    margin: 4px 10px;
+}
+
+.item-description h6{
+    font-family: Averta, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
 }
