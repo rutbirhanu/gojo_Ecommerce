@@ -52,6 +52,7 @@ body{
     min-height: 40vh;
     max-width: 80vw;
     max-height: 60vh;
+    border-radius: 5px;
 }
 
 .details-right-side h3 {
@@ -83,7 +84,7 @@ color: rgb(118, 118, 118);
 }
 
 
-@media only screen and (max-width:900px){
+@media only screen and (max-width:1030px){
     .details-page-container{
         display: flex;
         flex-direction: column;

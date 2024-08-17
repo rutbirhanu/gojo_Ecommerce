@@ -28,56 +28,7 @@ export const NavgationCategories = [
     //     "title":  "Home",
     //     "image":""
     // },
-    {
-        "title": "Women",
-        "image":"/dress.png"
-    },
-
-    {
-        "title": "Men",
-        "image":"/t-shirt.png"
-    },
-    {
-        "title": "Toys",
-        "image":"/toys.png"
-    },
-    {
-        "title": "Electronics",
-        "image":"/phone.png"
-    },
-    {
-        "title": "Cosmetics",
-        "image":"/cosmetics.png"
-    },
-    {
-        "title": "Sport",
-        "image":"/sports.png"
-    },
-    {
-        "title": "Women",
-        "image":"/dress.png"
-    },
-
-    {
-        "title": "Men",
-        "image":"/t-shirt.png"
-    },
-    {
-        "title": "Toys",
-        "image":"/toys.png"
-    },
-    {
-        "title": "Electronics",
-        "image":"/phone.png"
-    },
-    {
-        "title": "Cosmetics",
-        "image":"/cosmetics.png"
-    },
-    {
-        "title": "Sport",
-        "image":"/sports.png"
-    },
+   
 
 ]
 

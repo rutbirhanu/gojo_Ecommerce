@@ -183,7 +183,12 @@ margin: 7px 15px 1.4rem 15px;
     font-size: 18px;
     font-weight: 500;
 }
-
+.footer-container{
+    margin-top: 5em;
+    height: 13em;
+    background: linear-gradient(45deg, #D29468, #E2B99D);
+   
+}
 
 
 

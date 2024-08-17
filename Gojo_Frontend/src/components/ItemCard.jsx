@@ -1,9 +1,12 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+
+
+import { Link } from "react-router-dom"
 import "./components.css"
 
-function ItemCard({name, image, price}) {
+function ItemCard({name, image, price,id}) {
   return (
+    <Link to={`/product-detail/${id}`} >
     <div className='item-card-parent-container'>
       <div className="item-card-image">
         <img src={image} alt="apple watch"/>
@@ -12,7 +15,8 @@ function ItemCard({name, image, price}) {
         <p>{name}</p>
         <h6>${price}</h6>
       </div>
-    </div>
+      </div>
+      </Link>
   )
 }
 
