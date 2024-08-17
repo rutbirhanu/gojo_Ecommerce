@@ -25,7 +25,7 @@
 
 .category-card {
     position: relative;
-    margin: 0.7rem 1rem;
+    margin: 0.2rem 0.7rem;
 }
 
 .category-card p {
@@ -73,14 +73,14 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
     border-radius: 20px;
 }
 
 .search-container input {
     border: none;
     outline: none;
-    width: 17em;
+    width: 85%;
     background-color: transparent;
 }
 
@@ -94,7 +94,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 4em;
+    min-height: 4em;
     margin-bottom: 17px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -120,11 +120,11 @@
 }
 
 .right-side-nav>* {
-    margin: 23px;
+    margin: 21px;
 }
 
 .title-component p {
-    margin: 1em 4vw;
+    margin: 1.2em 5vw;
     font-family: Averta, sans-serif;
     font-weight: 600;
     font-size: 1.1rem;
@@ -136,7 +136,7 @@ width: 12em;
 display: flex;
 flex-direction: column;
 justify-content: center;
-margin: 10px 15px 2rem 15px;
+margin: 7px 15px 1.4rem 15px;
 }
 
 .item-card-image img {
@@ -164,4 +164,39 @@ margin: 10px 15px 2rem 15px;
     font-family: Averta, sans-serif;
     font-size: 15px;
     font-weight: 700;
+}
+
+@media only screen and (max-width:950px){
+    .navbar-container {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(45deg, #D29468, #E2B99D);
+        height: auto; /* Adjust height to auto to accommodate the extra row */
+        margin-bottom: 17px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 5px 10px;
+    }
+    
+    .left-side-nav {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        justify-content: flex-end; /* Align items to the left */
+    }
+    
+    .search-container {
+        width: 60vw; /* Full width on the bottom row */
+        margin-top: 10px; /* Space from the elements above */
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        padding: 5px;
+        border-radius: 20px;
+        border: 1px solid black;
+    }
+    
+    .right-side-nav p{
+        display: none;
+    }
 }
