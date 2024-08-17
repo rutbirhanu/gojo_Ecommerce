@@ -1,6 +1,7 @@
 import './pages.css'
 import TitleComponent from '../components/TitleComponent'
 import ItemCard from "../components/ItemCard"
+import ButtonComponent from '../components/ButtonComponent'
 
 
 function DetailsPage() {
@@ -13,7 +14,7 @@ function DetailsPage() {
 
           <div className="details-right-side">
               <h3>8 Topshop Brown Plant Print Top</h3>
-              <h3>$12.00</h3>
+            <h3>$12.00</h3>
                     <div className="item-details">
                         <h4>Details</h4>
                        <div className="detail">
@@ -32,7 +33,9 @@ function DetailsPage() {
                         <span>Tops & Blouses</span>
                         <span>Blouse</span>
                     </div>
-                     </div>
+            </div>
+            <ButtonComponent desc="Add to cart"/>
+            
           </div>
             </div>
             <br/>

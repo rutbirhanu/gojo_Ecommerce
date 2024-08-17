@@ -166,6 +166,27 @@ margin: 7px 15px 1.4rem 15px;
     font-weight: 700;
 }
 
+.button-container{
+    background-color: rgb(78, 114, 213);   
+    height: 2.5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 10px;
+}
+.button-container button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+
 @media only screen and (max-width:950px){
     .navbar-container {
         display: flex;
@@ -200,3 +221,4 @@ margin: 7px 15px 1.4rem 15px;
         display: none;
     }
 }
+
