@@ -67,7 +67,8 @@ body a{
     font-size: 25px;
 }
 .details-right-side{
-    min-width:33vw ;
+    min-width:30vw;
+    max-width: 90vw;
 }
 
 .item-details h4 {
@@ -79,6 +80,8 @@ body a{
 .item-details {
     margin: 1em 5em 1em 0;
     padding: 1em;
+    min-width: 3e0vw;
+    max-width: 90vw;
 }
 
 .item-details .detail {
@@ -90,6 +93,7 @@ body a{
 
 .item-details .detail span:nth-child(odd) {
     color: rgb(118, 118, 118);
+    padding-right: 2em;
 }
 
 .similar-items{

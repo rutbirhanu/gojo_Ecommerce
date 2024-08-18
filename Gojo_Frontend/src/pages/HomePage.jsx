@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux"
 import NavBar from "../components/NavBar"
 import { NavgationCategories } from "../assets/data/categories"
 import TitleComponent from "../components/TitleComponent"
+import Footer from "../components/Footer"
 
 function HomePage() {
   const dispatch = useDispatch()
@@ -78,7 +79,7 @@ function HomePage() {
           </div>
         ))}
       </div>
-
+        <Footer/>
     </div>
   )
 }
