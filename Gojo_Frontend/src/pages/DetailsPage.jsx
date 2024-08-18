@@ -12,18 +12,19 @@ import { useSelector } from 'react-redux'
 function DetailsPage() {
   const { id } = useParams()
   const { products } = useSelector(state => state.product)
-  const [product, setProduct] = useState()
-  
-  useEffect(() => {
-    console.log(id)
-    console.log(typeof(id))
+  const [product, setProduct] = useState({})
 
+  useEffect(() => {
     const selectedProduct = products.find(product => (product.id === id))
     setProduct(selectedProduct)
-    console.log(product)
 
   }, [id])
-  console.log(product)
+  const similarProducts = products.filter(item => item.category === product.category)
+  console.log("hi")
+  console.log(products.category)
+  console.log("pip")
+  console.log(product.category)
+  console.log(similarProducts)
 
   return (
     <>
@@ -36,7 +37,7 @@ function DetailsPage() {
 
           <div className="details-right-side">
             <h3>{product.name}</h3>
-            <h3>{product.price}</h3>
+            <h3>${product.price}</h3>
             <div className="item-details">
               <h4>Details</h4>
               <div className="detail">
@@ -62,13 +63,17 @@ function DetailsPage() {
         </div>
         <br />
         <br />
+        <TitleComponent title="More From This Category" />
         <div className="similar-items">
-          <TitleComponent title="More From This Category" />
-          <ItemCard name="apple watch" image="/gallery-1.jpg" price="200" />
+          {
+            similarProducts.map(item => (
+              <ItemCard key={item.id} name={item.name} image={item.image} price={item.price} />
+            ))
+          }
         </div>
         <Footer />
       </div>
-  </>
+    </>
   )
 }
 

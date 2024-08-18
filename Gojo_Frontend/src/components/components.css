@@ -90,16 +90,17 @@
     left: 0;
     right: 0;
     z-index: 10;
-    background: linear-gradient(45deg, #D29468, #E2B99D);
+    background-color: rgb(37, 43, 96);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 4em;
+    min-height: 3.6em;
     margin-bottom: 17px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: 5px 10px;
     overflow: hidden;
+    color: white;
 }
 
 .navbar-container p {
@@ -117,6 +118,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    color: white;
+
 }
 
 .right-side-nav>* {
@@ -186,8 +189,7 @@ margin: 7px 15px 1.4rem 15px;
 .footer-container{
     margin-top: 5em;
     height: 13em;
-    background: linear-gradient(45deg, #D29468, #E2B99D);
-   
+    background-color: rgb(37, 43, 96);
 }
 
 
