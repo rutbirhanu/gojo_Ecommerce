@@ -1,18 +1,18 @@
 const mongoose = require("mongoose")
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcryptjs")
-const userModel=require("../model/user")
+const userModel = require("../model/user")
 require("dotenv").config()
 
-const SignUp = async(req, res) => {
+const SignUp = async (req, res) => {
     try {
-        const { email, password} = req.body
+        const { email, password } = req.body
         let user = await userModel.findOne({ email: email })
         if (user) {
             return res.status(409).json("email already exist")
         }
-        const hashed=await bcrypt.hash(password, 10)
-         user = await userModel.create({ password: hashed, email })
+        const hashed = await bcrypt.hash(password, 10)
+        user = await userModel.create({ password: hashed, email })
         res.status(201).json("User registered succuessfully")
     }
     catch (err) {
@@ -21,11 +21,11 @@ const SignUp = async(req, res) => {
     }
 }
 
-const LogIn = async(req, res) => {
+const LogIn = async (req, res) => {
     try {
-        const { email, password} = req.body
+        const { email, password } = req.body
         const user = await userModel.findOne({ email: email })
-      
+
         if (!user) {
             return res.status(404).json("user is not found")
         }
@@ -39,9 +39,9 @@ const LogIn = async(req, res) => {
             }
         }, process.env.JWT_SECRET
         )
-        res.cookie('token', token, { httpOnly: true,secure:false ,maxAge: 10 * 24 * 60 * 60 * 1000 });
-        res.status(200).json({ token,message:"login successfully"})
-        
+        res.cookie('token', token, { httpOnly: true, secure: false, maxAge: 10 * 24 * 60 * 60 * 1000 });
+        res.status(200).json({ token, message: "login successfully" })
+
     }
     catch (err) {
         console.log(err)
@@ -49,4 +49,28 @@ const LogIn = async(req, res) => {
     }
 }
 
-module.exports= {SignUp, LogIn}
+
+const SignInWithGoogle = async (req, res) => {
+    try {
+        const { email } = req.user
+        let user = await userModel.findOne({ email: email })
+        if (!user) {
+            user = await userModel.create({ email: email })
+        }
+        const token = jwt.sign({
+            payload: {
+                userId: user._id
+            }
+        }, process.env.JWT_SECRET
+        )
+        res.cookie('token', token, { httpOnly: true, secure: false, maxAge: 10 * 24 * 60 * 60 * 1000 });
+        res.status(200).json(user)
+    }
+    catch (err) {
+        console.log(err)
+        res.status(400).json("error loading google account")
+    }
+}
+
+
+module.exports = { SignUp, LogIn, SignInWithGoogle }
