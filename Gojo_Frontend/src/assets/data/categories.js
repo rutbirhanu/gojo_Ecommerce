@@ -1,56 +1,55 @@
 export const NavgationCategories = [
     {
         "title": "Women",
-        "image":"/dress.png"
+        "image": "/dress.png"
     },
-
     {
         "title": "Men",
-        "image":"/t-shirt.png"
+        "image": "/t-shirt.png"
     },
     {
         "title": "Toys",
-        "image":"/toys.png"
+        "image": "/toys.png"
     },
     {
         "title": "Electronics",
-        "image":"/phone.png"
+        "image": "/phone.png"
     },
     {
         "title": "Cosmetics",
-        "image":"/cosmetics.png"
+        "image": "/cosmetics.png"
     },
     {
         "title": "Sport",
-        "image":"/sports.png"
+        "image": "/sports.png"
     },
     {
-        "title":  "Home",
-        "image":"/vase.png"
+        "title": "Home",
+        "image": "/vase.png"
     },
     {
         "title": "Beauty",
-        "image":"/skin-care.png"
+        "image": "/skin-care.png"
     },
     {
         "title": "Kids",
-        "image":"/children.png"
+        "image": "/children.png"
     },
     {
         "title": "Handbags",
-        "image":"/handbag.png"
+        "image": "/handbag.png"
     },
     {
         "title": "Gaming",
-        "image":"/game-controller.png"
+        "image": "/game-controller.png"
     },
     {
         "title": "Tools",
-        "image":"/tools.png"
+        "image": "/tools.png"
     },
     {
         "title": "Vintage",
-        "image":"/gramphone.png"
+        "image": "/gramphone.png"
     },
 
 ]
@@ -61,17 +60,17 @@ export const Categories = [
     {
         "category": "Men",
         "description": "t shirt, and more",
-        "image":"https://i.mdel.net/oftheminute/images/2019/08/stas_55_04.jpg"
+        "image": "https://i.mdel.net/oftheminute/images/2019/08/stas_55_04.jpg"
     },
     {
         "category": "Men",
         "description": "t shirt, and more",
-        "image":"https://www.essence.com/wp-content/uploads/2020/12/Fernando-Cabral-Mens-Health-UK-July-2019-by-Jon-Gorrigan.jpg"
+        "image": "https://www.essence.com/wp-content/uploads/2020/12/Fernando-Cabral-Mens-Health-UK-July-2019-by-Jon-Gorrigan.jpg"
     },
     {
         "category": "Men",
         "description": "t shirt, and more",
-        "image":"https://ae01.alicdn.com/kf/S591bb2f59f8b4e0dbb879c2170241f87K.jpg_640x640q90.jpg"
+        "image": "https://ae01.alicdn.com/kf/S591bb2f59f8b4e0dbb879c2170241f87K.jpg_640x640q90.jpg"
     },
     {
         "category": "Men",
@@ -98,7 +97,7 @@ export const Categories = [
         "description": "t shirt, skirt, bags and more ->",
         "image": "https://publish.purewow.net/wp-content/uploads/sites/2/2022/03/The-Learning-Journey-Match-It-Self-Correcting-Spelling-Puzzles-Ages-2-to-5-TOP-Educational-Toys.jpg?resize=260%2C260"
     },
-   
+
 ]
 
 

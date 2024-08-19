@@ -37,18 +37,9 @@ function CarouselComp() {
           src="https://i0.wp.com/nlindia.com/wp-content/uploads/2021/05/ecommerce-website-like-amazon-banner.jpg"
             alt="Third slide"
              height="230px"
-        />
-       
+        />  
       </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://plus.unsplash.com/premium_photo-1673349178635-39b654f84401?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNsaWRlcnxlbnwwfHwwfHx8MA%3D%3D"
-            alt="Fifth slide"
-            height="270px"
-            style={{ objectFit: "cover"}}
-        />
-      </Carousel.Item>
+     
     </Carousel>
     </div>
   )
