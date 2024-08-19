@@ -6,7 +6,7 @@ export const Items=[
           "category": "Men",
           "description": "This is the latest shoe in the collection of Nike Air Force. Really comfortable so far.",
           "price": "900",
-    "brand": "Nike",
+           "brand": "Nike",
           "image":"/gallery-1.jpg"
         },
         {

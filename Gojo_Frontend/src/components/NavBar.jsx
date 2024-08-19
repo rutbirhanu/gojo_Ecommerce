@@ -15,7 +15,7 @@ function NavBar() {
         <p>Sign up</p>
         <p>login</p>
         <p> || </p>
-        <img src="/cart.png" alt="cart" height="21px" />
+        <img src="/cart.png" alt="cart" height="33px" />
       </div>
     </div>
   )

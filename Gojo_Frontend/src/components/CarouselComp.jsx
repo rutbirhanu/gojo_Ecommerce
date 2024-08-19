@@ -7,7 +7,7 @@ function CarouselComp() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://ithinkbigger.com/wp-content/uploads/2022/03/eCommerce-Website-Components-photo-1024x375.jpg"
+          src="https://img.freepik.com/premium-photo/game-board-with-game-board-it_337384-105991.jpg?size=626&ext=jpg&ga=GA1.2.46193471.1724059065&semt=ais_hybrid"
             alt="First slide"
             height="230px"
         />
@@ -43,9 +43,9 @@ function CarouselComp() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://www.shutterstock.com/image-vector/ecommerce-website-banner-template-presents-260nw-2252124451.jpg"
+          src="https://plus.unsplash.com/premium_photo-1673349178635-39b654f84401?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNsaWRlcnxlbnwwfHwwfHx8MA%3D%3D"
             alt="Fifth slide"
-            height="230px"
+            height="270px"
             style={{ objectFit: "cover"}}
         />
       </Carousel.Item>

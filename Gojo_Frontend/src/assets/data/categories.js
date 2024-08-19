@@ -24,11 +24,34 @@ export const NavgationCategories = [
         "title": "Sport",
         "image":"/sports.png"
     },
-    // {
-    //     "title":  "Home",
-    //     "image":""
-    // },
-   
+    {
+        "title":  "Home",
+        "image":"/vase.png"
+    },
+    {
+        "title": "Beauty",
+        "image":"/skin-care.png"
+    },
+    {
+        "title": "Kids",
+        "image":"/children.png"
+    },
+    {
+        "title": "Handbags",
+        "image":"/handbag.png"
+    },
+    {
+        "title": "Gaming",
+        "image":"/game-controller.png"
+    },
+    {
+        "title": "Tools",
+        "image":"/tools.png"
+    },
+    {
+        "title": "Vintage",
+        "image":"/gramphone.png"
+    },
 
 ]
 
