@@ -4,7 +4,7 @@ function NavBar() {
   return (
     <div className="navbar-container">
       <div className="left-side-nav">
-        <img src="/gojo_logo.png" alt="logo"  height="45px"/>
+        <img src="/gojo_logo.png" alt="logo"  height="42px"/>
         <div className="search-container">
           <input type="text" />
           <img src="/search-logo.png" alt="search" height="17px"/>

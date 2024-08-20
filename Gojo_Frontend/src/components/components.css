@@ -100,7 +100,7 @@
     margin-bottom: 17px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    padding: 5px 10px;
+    padding: 0 10px;
     overflow: hidden;
     color: white;
 }
@@ -130,30 +130,33 @@
 }
 
 .title-component p {
-    margin: 1.2em 5vw;
+    margin: 1em 5vw 3px 5vw;
     font-family: Averta, sans-serif;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
 .item-card-parent-container {
-    height: 12em;
-    width: 11em;
+    height: 11em;
+    width: 9.5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 7px 13px 1.2rem 13px;
+    align-items: center;
+    margin: 7px 10px 1rem 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 2px rgb(246, 246, 246);
+
 }
 
 .item-card-image img {
-    width: 7em;
-    height: 7em;
+    width: 7.5em;
+    height: 7.5em;
     border-top-left-radius: 1px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 1px;
-    box-shadow: 1px 1px 1px 2px rgb(235, 235, 235);
-
+    box-shadow: 0 0 1px 2px rgb(234, 234, 234);
 }
 
 .item-description p {
@@ -161,16 +164,19 @@
     font-size: 15px;
     font-weight: 500;
     overflow-x: hidden;
+    margin: 3px;
 }
 
 .item-description {
     margin: 4px 10px;
+   
 }
 
 .item-description h6 {
     font-family: Averta, sans-serif;
     font-size: 15px;
     font-weight: 700;
+    margin: 3px;
 }
 
 .button-container {
@@ -283,5 +289,10 @@
 
     .right-side-nav p {
         display: none;
+    }
+    .item-card-parent-container {
+        height: 11em;
+        width: 8em;
+        margin: 8px 5px;
     }
 }

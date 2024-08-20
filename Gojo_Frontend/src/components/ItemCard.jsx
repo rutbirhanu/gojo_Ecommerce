@@ -9,7 +9,7 @@ function ItemCard({name, image, price,id}) {
     <Link to={`/product-detail/${id}`} >
     <div className='item-card-parent-container'>
       <div className="item-card-image">
-        <img src={image} alt="apple watch"/>
+        <img src={image} alt="item"/>
       </div>
       <div className="item-description">
         <p>{name}</p>
