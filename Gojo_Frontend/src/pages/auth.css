@@ -10,11 +10,10 @@
 }
 
 body {
-    background: #ecf0f3;
+    /* background: #ecf0f3; */
 }
-.sign-in-container{
-    display: flex;
-}
+
+
 .wrapper {
     max-width: 400px;
     min-height: 460px;
@@ -25,9 +24,8 @@ body {
     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
 }
 
-.logo {
-    width: 80px;
-    margin: auto;
+.logo h3 {
+    text-align: center;
 }
 
 .logo img {
@@ -73,7 +71,7 @@ body {
 }
 
 .text-center p {
-    font-size: 12px;
+    font-size: 13px;
     margin: 0;
 }
 
@@ -163,6 +161,7 @@ body {
     font-weight: 500;
     background-color: transparent;
 }
+
 
 
 @media(max-width: 380px) {

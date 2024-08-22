@@ -4,7 +4,7 @@ import ItemCard from "../components/ItemCard"
 import ButtonComponent from '../components/ButtonComponent'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 
@@ -20,11 +20,6 @@ function DetailsPage() {
 
   }, [id])
   const similarProducts = products.filter(item => item.category === product.category)
-  console.log("hi")
-  console.log(products.category)
-  console.log("pip")
-  console.log(product.category)
-  console.log(similarProducts)
 
   return (
     <>
@@ -66,9 +61,13 @@ function DetailsPage() {
         <TitleComponent title="More From This Category" />
         <div className="similar-items">
           {
-            similarProducts.map(item => (
-              <ItemCard key={item.id} name={item.name} image={item.image} price={item.price} />
-            ))
+            similarProducts
+              .filter(item => item.id !== id) // Exclude the selected item
+              .map(item => (
+                <Link to={`/details/${item.id}`} key={item.id}>
+                  <ItemCard id={item.id} name={item.name} image={item.image} price={item.price} />
+                </Link>
+              ))
           }
         </div>
         <Footer />

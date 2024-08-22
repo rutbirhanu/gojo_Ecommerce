@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom"
 import "./components.css"
 
 function NavBar() {
+  const navigate = useNavigate();
   return (
     <div className="navbar-container">
       <div className="left-side-nav">
@@ -12,8 +14,8 @@ function NavBar() {
       </div>
       <div className="right-side-nav">
         <p>Download app</p>
-        <p>Sign up</p>
-        <p>login</p>
+        <p onClick={()=>navigate("/sign-up")}>Sign up</p>
+        <p onClick={()=>navigate("/login")}>Login</p>
         <p> || </p>
         <img src="/cart.png" alt="cart" height="33px" />
       </div>
