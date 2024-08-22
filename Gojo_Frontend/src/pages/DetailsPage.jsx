@@ -4,7 +4,7 @@ import ItemCard from "../components/ItemCard"
 import ButtonComponent from '../components/ButtonComponent'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import SnackBar from '../components/snackBarComponent.jsx'
@@ -57,7 +57,7 @@ function DetailsPage() {
               {
                 showSnackBar && <SnackBar visible={showSnackBar} onClose={handleCloseSnackBar} />}
             </div>
-            <ButtonComponent desc="Add to cart" onclick={() => setShowSnackBar(true)} />
+            <ButtonComponent desc="Add to cart" onclick={() => { setShowSnackBar(true) }} />
 
           </div>
         </div>
