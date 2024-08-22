@@ -7,6 +7,7 @@ import NavBar from '../components/NavBar'
 import { Link, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+import SnackBar from '../components/snackBarComponent.jsx'
 
 
 function DetailsPage() {
@@ -19,6 +20,11 @@ function DetailsPage() {
     setProduct(selectedProduct)
 
   }, [id])
+
+  const [showSnackBar, setShowSnackBar] = useState(false)
+  const handleCloseSnackBar = () => {
+    setShowSnackBar(false);
+  };
   const similarProducts = products.filter(item => item.category === product.category)
 
   return (
@@ -47,12 +53,11 @@ function DetailsPage() {
                 <span>Category</span>
                 <span>{product.category}</span>
               </div>
-              <div className="detail">
-                <span>Tops & Blouses</span>
-                <span>Blouse</span>
-              </div>
+            
+              {
+                showSnackBar && <SnackBar visible={showSnackBar} onClose={handleCloseSnackBar} />}
             </div>
-            <ButtonComponent desc="Add to cart" />
+            <ButtonComponent desc="Add to cart" onclick={() => setShowSnackBar(true)} />
 
           </div>
         </div>
@@ -64,9 +69,9 @@ function DetailsPage() {
             similarProducts
               .filter(item => item.id !== id) // Exclude the selected item
               .map(item => (
-                <Link to={`/details/${item.id}`} key={item.id}>
-                  <ItemCard id={item.id} name={item.name} image={item.image} price={item.price} />
-                </Link>
+                // <Link to={`/details/${item.id}`} key={item.id}>
+                  <ItemCard id={item.id} key={item.id} name={item.name} image={item.image} price={item.price} />
+                // </Link>
               ))
           }
         </div>

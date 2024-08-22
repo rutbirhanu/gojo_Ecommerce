@@ -2,10 +2,10 @@
 import "./components.css"
 
 
-function ButtonComponent({desc}) {
+function ButtonComponent({desc, onclick}) {
   return (
       <div className="button-container">
-          <button>{desc}</button>
+          <button onClick={onclick}>{desc}</button>
     </div>
   )
 }
