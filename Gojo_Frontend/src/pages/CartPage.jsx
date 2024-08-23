@@ -23,11 +23,11 @@ function CartPage() {
             </div>
             {
               products.map(product => (
-                <CartItemCard name={product.name} quantity={product.quantity} price={product.price} key={product.id} image={product.image} />
+                <CartItemCard name={product.name} id={product.id} quantity={product.quantity} price={product.price} key={product.id} image={product.image} />
               ))
             }
          
-            <div className="back-to-shop"><a href="/">&larr;</a><span className="text-muted">Back to shop</span></div>
+            <div className="back-to-shop" onClick={()=>navigate("/")}><a href="#">&larr;</a><span className="text-muted">Back to Shop</span></div>
           </div>
           <div className="col-md-4 summary">
             <div><h5><b>Summary</b></h5></div>
