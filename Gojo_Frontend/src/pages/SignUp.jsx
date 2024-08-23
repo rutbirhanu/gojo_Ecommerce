@@ -1,6 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.css';
+import { useState } from 'react';
+
 
 function SignUp() {
+
+  const [formValue, setFormValue] = useState({
+    email: "",
+    password:""
+  })
+  const onChange = (e) => {
+    setFormValue({...formValue, [e.target.name]:e.target.value})
+  }
+
+  const handleSignUp = (e) => {
+    e.preventDetfault()
+  }
   return (
     <div className ="wrapper">
     <div className ="logo">
@@ -10,13 +24,13 @@ function SignUp() {
     <form className ="p-3 mt-3">
         <div className ="form-field d-flex align-items-center">
             <span className ="far fa-user"></span>
-            <input type="email" name="email" id="email" placeholder="Email" />
+            <input type="email" name="email" id="email" placeholder="Email" onChange={onChange} />
         </div>
         <div className ="form-field d-flex align-items-center">
             <span className ="fas fa-key"></span>
-            <input type="password" name="password" id="pwd" placeholder="Password" />
+            <input type="password" name="password" id="pwd" placeholder="Password" onChange={onChange} />
         </div>
-        <button className ="btn mt-3">SignUp</button>
+        <button className ="btn mt-3" onChange={handleSignUp}>SignUp</button>
   </form>
   <div className="divider">
         <span>or</span>

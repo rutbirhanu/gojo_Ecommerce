@@ -4,8 +4,8 @@ import "./components.css"
 
 function ButtonComponent({desc, onclick}) {
   return (
-      <div className="button-container">
-          <button onClick={onclick}>{desc}</button>
+      <div className="button-container" onClick={onclick}>
+          <button >{desc}</button>
     </div>
   )
 }
