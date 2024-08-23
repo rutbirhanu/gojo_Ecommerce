@@ -1,8 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { useState } from 'react';
+import { useDispatch } from "react-redux";
+import { register } from '../redux/authSlice';
 
 
 function SignUp() {
+  const dispatch= useDispatch()
 
   const [formValue, setFormValue] = useState({
     email: "",
@@ -14,7 +17,9 @@ function SignUp() {
 
   const handleSignUp = (e) => {
     e.preventDetfault()
+    dispatch(register(formValue))
   }
+  
   return (
     <div className ="wrapper">
     <div className ="logo">

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 let initialState = {
     products: [],
     totalPrice: 0,
-    totalQuantity:0
+    totalQuantity: 0
 }
 
 const cartSlice = createSlice({
@@ -24,22 +24,22 @@ const cartSlice = createSlice({
                     quantity: 1,
                     name: newItem.name,
                     image: newItem.image,
-                    price:newItem.price
+                    price: newItem.price
                 })
             }
-            state.totalPrice += newItem.price
+            state.totalPrice += +newItem.price
             state.totalQuantity++
 
         },
 
-     removeFromCart: (state, action) => {
+        removeFromCart: (state, action) => {
             const id = action.payload
-            const selectedItem = state.products.find(product=> product.id === id)
+            const selectedItem = state.products.find(product => product.id === id)
             state.totalPrice -= selectedItem.price
             state.totalQuantity -= selectedItem.quantity
-            state.products= state.products.filter(product=>product.id !== id)
+            state.products = state.products.filter(product => product.id !== id)
         },
-     
+
         increaseQuantity: (state, action) => {
             const id = action.payload
             const selectedItem = state.products.find(product => product.id === id)
@@ -47,9 +47,9 @@ const cartSlice = createSlice({
                 state.totalPrice += selectedItem.price
                 state.totalQuantity++
                 selectedItem.quantity++
-            }   
+            }
         },
-        
+
         decreaseQuantity: (state, action) => {
             const id = action.payload
             const selectedItem = state.products.find(product => product.id === id)
@@ -57,9 +57,9 @@ const cartSlice = createSlice({
                 state.totalPrice -= selectedItem.price
                 state.totalQuantity--
                 selectedItem.quantity--
-            }  
+            }
         }
-     
+
     }
 })
 

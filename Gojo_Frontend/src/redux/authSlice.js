@@ -5,14 +5,31 @@ export const login = createAsyncThunk(
     "auth/login",
     async (loginData, thunkAPI) => {
         try {
-            const response = await axios.post("http:/localhost:1000/user/login", { user: userData })
-            return response.body.user
+            const response = await axios.post("http:/localhost:1000/user/login", { user: loginData })
+            return response.data.user
         }
         catch (err) {
-            return thunkAPI.rejectWithValue(err.response.body.error)
+            return thunkAPI.rejectWithValue(err.response.data.error)
         }
     }
 )
+
+export const register = createAsyncThunk(
+    "auth/register",
+    async (registerData, thunkAPI) => {
+        try {
+            const response = await axios.post("http:/localhost:1000/user/register", {
+                user:registerData
+            })
+            return response.data.user
+        }
+        catch (err) {
+            return thunkAPI.rejectWithValue(err.response.data.error)
+        }
+    }
+)
+
+
 const initialState = {
     user: null,
     isLoading:false
@@ -31,6 +48,17 @@ const authSlice = createSlice({
                 state.isLoading=false
             })
             .addCase(login.rejected, state => {
+                state.isLoading=false
+            })
+
+            .addCase(register.pending, state => {
+                state.isLoading=true
+            })
+            .addCase(register.fulfilled, (state, action) => {
+                state.user = action.payload
+                state.isLoading=false
+            })
+            .addCase(register.rejected, state => {
                 state.isLoading=false
             })
     }

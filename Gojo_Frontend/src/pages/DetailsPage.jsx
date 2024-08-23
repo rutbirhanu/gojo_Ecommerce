@@ -6,12 +6,14 @@ import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from "react-redux"
 import SnackBar from '../components/snackBarComponent.jsx'
+import { addToCart } from '../redux/cartSlice.js'
 
 
 function DetailsPage() {
   const { id } = useParams()
+  const dispatch= useDispatch()
   const { products } = useSelector(state => state.product)
   const [product, setProduct] = useState({})
 
@@ -57,7 +59,10 @@ function DetailsPage() {
               {
                 showSnackBar && <SnackBar visible={showSnackBar} onClose={handleCloseSnackBar} />}
             </div>
-            <ButtonComponent desc="Add to cart" onclick={() => { setShowSnackBar(true) }} />
+            <ButtonComponent desc="Add to cart" onclick={() => {
+              setShowSnackBar(true)
+              dispatch(addToCart(product))
+            }} />
 
           </div>
         </div>

@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import "./auth.css"
 import { useState } from 'react';
-import {useDispatch} from "react"
+import { useDispatch } from "react-redux";
 import { login } from '../redux/authSlice';
 
 function LogIn() {

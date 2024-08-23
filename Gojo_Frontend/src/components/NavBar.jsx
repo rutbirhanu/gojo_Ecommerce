@@ -17,7 +17,7 @@ function NavBar() {
         <p onClick={()=>navigate("/sign-up")}>Sign up</p>
         <p onClick={()=>navigate("/login")}>Login</p>
         <p> || </p>
-        <img src="/cart.png" alt="cart" height="33px" />
+        <img src="/cart.png" alt="cart" height="33px" onClick={()=>navigate("/cart")} />
       </div>
     </div>
   )
