@@ -5,7 +5,7 @@ const verifyGoogleToken = async (req, res, next) => {
         const idToken = req.headers.authorization
     
         if (!idToken) {
-            res.status(401).json("Unauthorized")
+            return res.status(401).json("Unauthorized")
         }
         const decodedJwt = await admin.auth().verifyIdToken(idToken)
         req.user = decodedJwt

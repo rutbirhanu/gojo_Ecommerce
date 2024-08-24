@@ -2,7 +2,8 @@ const express= require("express")
 const cors = require("cors")
 const admin = require("firebase-admin")
 const userRoute = require("./route/userRoute")
-const connectDB=require("./config/dbConfig")
+const connectDB = require("./config/dbConfig")
+const serviceAccount = require("./serviceAccountKey.json")
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
@@ -13,17 +14,8 @@ app.use(cors())
 app.use(express.json())
 app.use("/user", userRoute)
     
-(async () => {
-    try {
-        await connectDB(process.env.MONGODB_CONNECTION);
-        console.log("Database connected");
-    } catch (err) {
-        console.error("Error connecting to the database:", err);
-        process.exit(1); // Exit process if database connection fails
-    }
-})();
 
-
-app.listen(3000, () => {
+connectDB(process.env.MONGODB_CONNECTION)
+app.listen(3500, () => {
     console.log("server has started")
 })

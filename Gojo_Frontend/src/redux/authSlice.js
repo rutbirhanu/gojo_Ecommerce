@@ -5,7 +5,8 @@ export const login = createAsyncThunk(
     "auth/login",
     async (loginData, thunkAPI) => {
         try {
-            const response = await axios.post("http:/localhost:1000/user/login", { user: loginData })
+            const response = await axios.post("http://localhost:3500/user/login", { user: loginData })
+            console.log(response)
             return response.data.user
         }
         catch (err) {
@@ -18,9 +19,10 @@ export const register = createAsyncThunk(
     "auth/register",
     async (registerData, thunkAPI) => {
         try {
-            const response = await axios.post("http:/localhost:1000/user/register", {
+            const response = await axios.post("http://localhost:3500/user/sign-up", {
                 user:registerData
             })
+            console.log(response)
             return response.data.user
         }
         catch (err) {

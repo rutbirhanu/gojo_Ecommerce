@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./cart.css"
 import CartItemCard from "../components/cartItemCard";
