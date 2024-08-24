@@ -8,7 +8,7 @@ function CategoryCard({desc, category, imgSource}) {
               <p>{ desc}</p>
               <h5>{category}</h5>
           </div>
-          <img src={imgSource} />
+      <img src={imgSource} />
     </div>
   )
 }

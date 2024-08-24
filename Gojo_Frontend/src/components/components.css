@@ -28,6 +28,7 @@
 .category-card {
     position: relative;
     margin: 0.2rem 0.7rem;
+   
 }
 
 .category-card p {
@@ -45,6 +46,16 @@
     position: absolute;
     top: 17px;
     left: 15px;
+    transition:background-color 0.4s ease-in-out, top 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
+.category-card:hover .category-card-overlay {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 99%;
+    width: 99%;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .category-card-container1 {

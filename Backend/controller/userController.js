@@ -10,11 +10,11 @@ const SignUp = async (req, res) => {
         const { email, password } = req.body
         let user = await userModel.findOne({ email: email })
         if (user) {
-            return res.status(409).json("email already exist")
+            return res.status(409).json({ error: "Email already exists" })
         }
         const hashed = await bcrypt.hash(password, 10)
         user = await userModel.create({ password: hashed, email })
-        res.status(201).json("User registered succuessfully")
+        res.status(201).json(user)
     }
     catch (err) {
         console.log(err)
@@ -28,11 +28,11 @@ const LogIn = async (req, res) => {
         const user = await userModel.findOne({ email: email })
 
         if (!user) {
-            return res.status(404).json("user is not found")
+            return res.status(404).json({error: "User is not found" })
         }
         const compare = await bcrypt.compare(password, user.password)
         if (compare == false) {
-            return res.status(401).json("login failed")
+            return res.status(401).json({ error: "Login Failed" })
         }
         const token = jwt.sign({
             payload: {
