@@ -19,7 +19,7 @@
 
 ## Files to be created (values from Firebase)
 
-  - file named "firebase.js" inside the src directory holding and include the information from firebase and it most likely looks like this
+  - file named "firebase.js" inside the src directory and include the information from firebase and it most likely looks like this
   
 const firebaseConfig = {
   apiKey: "AIzaSyBaDvJDenMtqkqzkBFWGW67NEzuv06AKVI",
