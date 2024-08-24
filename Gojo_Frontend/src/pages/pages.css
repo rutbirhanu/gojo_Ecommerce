@@ -102,6 +102,12 @@ body a {
     margin-left: 15px;
 }
 
+.category-items-page-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 1em;
+}
+
 
 @media only screen and (max-width:1030px) {
     .details-page-container {

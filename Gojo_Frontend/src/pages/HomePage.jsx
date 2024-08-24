@@ -49,8 +49,8 @@ function HomePage() {
       </div>
 
       <div className="category-card-container2">
-        <CategoryCard imgSource="https://www.modelsdirectblog.com/wp-content/uploads/2020/11/shutterstock_1121333510.jpg" category="Sport" desc="Lululemon, Alo and more ..." />
-        <CategoryCard imgSource="https://www.rebelsport.com.au/on/demandware.static/-/Library-Sites-rebel-shared-library/default/dw4cc1588e/category/womens/cards/240329-XPLP-Womens-Footwear-Sneakers-Category-Heritage.jpg" category="Sneakers" desc="Nike, Jordan, Adidas, and more" />
+        <CategoryCard imgSource="https://www.modelsdirectblog.com/wp-content/uploads/2020/11/shutterstock_1121333510.jpg" category="Sports" desc="Lululemon, Alo and more ..." />
+        <CategoryCard imgSource="https://www.rebelsport.com.au/on/demandware.static/-/Library-Sites-rebel-shared-library/default/dw4cc1588e/category/womens/cards/240329-XPLP-Womens-Footwear-Sneakers-Category-Heritage.jpg" category="Sneaker" desc="Nike, Jordan, Adidas, and more" />
         <CategoryCard imgSource="https://accessorizelondon.in/cdn/shop/files/MA-28187004001_1_8a091db7-0510-47d6-8eff-f95c927c4dd6.webp?crop=center&height=720&v=1697534229&width=720" category="Handbags" desc="Authentic, designer, trend" />
         <CategoryCard imgSource="https://static.vecteezy.com/system/resources/previews/030/680/146/non_2x/toys-with-white-background-high-quality-ultra-hd-free-photo.jpg" category="Toys" desc="Building blocks, dolls" />
         <br />
