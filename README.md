@@ -17,7 +17,7 @@
   - MONGODB_CONNECTION=YOUR_MONGODB_CONNECTION_STRING
   - JWT_SECRET=YOUR_JWT_SECRET
 
-##Files to be created (From Firebase )
+## Files to be created (values from Firebase)
 
   - file named "firebase.js" inside the src directory holding and include the information from firebase and it most likely looks like this
   
