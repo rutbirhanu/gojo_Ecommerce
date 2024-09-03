@@ -8,7 +8,6 @@ require("dotenv").config()
 const SignUp = async (req, res) => {
     try {
         const { email, password, location } = req.body
-        console.log(location)
         let user = await userModel.findOne({ email: email })
         if (user) {
             return res.status(409).json({ error: "Email already exists" })

@@ -27,15 +27,23 @@ export const register = createAsyncThunk(
                 });
             };
 
-            const position = await getLocation();
-            const { latitude, longitude } = position.coords;
-            const mapboxToken = import.meta.env.VITE_API_MAPBOX_TOKEN;
-            const geocodeResponse = await fetch(
-                `https://api.mapbox.com/geocoding/v5/mapbox.places/${longitude},${latitude}.json?access_token=${mapboxToken}`
-            );
-            const geocodeData = await geocodeResponse.json();
-            const location = geocodeData.features[0]?.place_name
-            const locationName = location.split(", ").slice(-2).join(", ") || "World Wide";
+            let locationName = "Worldwide"; // Default location
+
+            try {
+                const position = await getLocation();
+                const { latitude, longitude } = position.coords;
+                const mapboxToken = import.meta.env.VITE_API_MAPBOX_TOKEN;
+                const geocodeResponse = await fetch(
+                    `https://api.mapbox.com/geocoding/v5/mapbox.places/${longitude},${latitude}.json?access_token=${mapboxToken}`
+                );
+                const geocodeData = await geocodeResponse.json();
+                const location = geocodeData.features[0]?.place_name;
+                locationName = location ? location.split(", ").slice(-2).join(", ") : "Worldwide";
+            } catch (error) {
+                // Handle location access denied or other errors
+                console.error("Error getting location:", error);
+                // Fallback to default location or handle as needed
+            }
 
             const dataWithLocation = {
                 ...registerData,
