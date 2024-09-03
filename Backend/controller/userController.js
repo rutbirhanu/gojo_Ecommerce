@@ -7,13 +7,14 @@ require("dotenv").config()
 
 const SignUp = async (req, res) => {
     try {
-        const { email, password } = req.body
+        const { email, password, location } = req.body
+        console.log(location)
         let user = await userModel.findOne({ email: email })
         if (user) {
             return res.status(409).json({ error: "Email already exists" })
         }
         const hashed = await bcrypt.hash(password, 10)
-        user = await userModel.create({ password: hashed, email })
+        user = await userModel.create({ password: hashed, email, location })
         res.status(201).json(user)
     }
     catch (err) {
@@ -28,7 +29,7 @@ const LogIn = async (req, res) => {
         const user = await userModel.findOne({ email: email })
 
         if (!user) {
-            return res.status(404).json({error: "User is not found" })
+            return res.status(404).json({ error: "User is not found" })
         }
         const compare = await bcrypt.compare(password, user.password)
         if (compare == false) {
