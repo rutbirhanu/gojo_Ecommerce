@@ -40,9 +40,7 @@ export const register = createAsyncThunk(
                 const location = geocodeData.features[0]?.place_name;
                 locationName = location ? location.split(", ").slice(-2).join(", ") : "Worldwide";
             } catch (error) {
-                // Handle location access denied or other errors
                 console.error("Error getting location:", error);
-                // Fallback to default location or handle as needed
             }
 
             const dataWithLocation = {

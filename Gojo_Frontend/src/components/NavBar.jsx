@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom"
 import "./components.css"
-import { useSelector } from "react-redux"
 import { useEffect, useState } from "react";
 
 function NavBar() {
@@ -16,7 +15,6 @@ function NavBar() {
   }, [])
 
   const navigate = useNavigate();
-  const { user } = useSelector(state => state.auth)
   return (
     <div className="navbar-container">
       <div className="left-side-nav">
@@ -26,7 +24,7 @@ function NavBar() {
           <img src="/search-logo.png" alt="search" height="17px" />
         </div>
       </div>
-      <p style={{ fontStyle: "italic", fontSize: "14px", margin: 0 }} onClick={() => console.log(user)}>{userLocation}</p>
+      <p style={{ fontStyle: "italic", fontSize: "14px", margin: 0 }}>{userLocation}</p>
 
       <div className="right-side-nav">
         <p>Download app</p>
