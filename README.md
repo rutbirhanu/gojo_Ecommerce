@@ -16,6 +16,7 @@
 ## Set up environment variables
   - MONGODB_CONNECTION=YOUR_MONGODB_CONNECTION_STRING
   - JWT_SECRET=YOUR_JWT_SECRET
+  - VITE_API_MAPBOX_TOKEN (on the frontend)
 
 ## Files to be created (values from Firebase)
 
