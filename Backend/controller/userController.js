@@ -42,7 +42,7 @@ const LogIn = async (req, res) => {
         }, process.env.JWT_SECRET
         )
         res.cookie('token', token, { httpOnly: true, secure: false, maxAge: 10 * 24 * 60 * 60 * 1000 });
-        res.status(200).json({ token, message: "login successfully" })
+        res.status(200).json({ user, message: "login successfully" })
 
     }
     catch (err) {
@@ -74,5 +74,13 @@ const SignInWithGoogle = async (req, res) => {
     }
 }
 
+const GetUsersData = async (req, res) => {
+    try {
+        
+    }
+    catch (err) {
+        res.status(500).json(err)
+    }
+}
 
 module.exports = { SignUp, LogIn, SignInWithGoogle }

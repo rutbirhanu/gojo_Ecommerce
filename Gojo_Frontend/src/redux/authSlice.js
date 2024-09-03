@@ -21,7 +21,6 @@ export const register = createAsyncThunk(
     "auth/register",
     async (registerData, thunkAPI) => {
         try {
-            // Step 1: Get user's location (latitude and longitude)
             const getLocation = () => {
                 return new Promise((resolve, reject) => {
                     navigator.geolocation.getCurrentPosition(resolve, reject);
@@ -30,26 +29,21 @@ export const register = createAsyncThunk(
 
             const position = await getLocation();
             const { latitude, longitude } = position.coords;
-console.log(latitude, longitude)
-            // Step 2: Use Mapbox Geocoding API to get the location name
             const mapboxToken = import.meta.env.VITE_API_MAPBOX_TOKEN;
             const geocodeResponse = await fetch(
                 `https://api.mapbox.com/geocoding/v5/mapbox.places/${longitude},${latitude}.json?access_token=${mapboxToken}`
             );
             const geocodeData = await geocodeResponse.json();
-            const locationName = geocodeData.features[0]?.place_name || "Unknown Location";
+            const location = geocodeData.features[0]?.place_name
+            const locationName = location.split(", ").slice(-2).join(", ") || "World Wide";
 
-            // Step 3: Include the location name in the registerData
             const dataWithLocation = {
                 ...registerData,
                 location: locationName
             };
 
-console.log("data")
-console.log(dataWithLocation)
-            // Send the registration request with the location data
             const response = await axios.post("http://localhost:3500/user/sign-up", dataWithLocation);
-            console.log(response.data);
+            localStorage.setItem("userLocation", JSON.stringify(locationName)); 
             return response.data;
         } catch (err) {
             return thunkAPI.rejectWithValue(err.response?.data?.error || err.message);
